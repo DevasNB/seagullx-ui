@@ -32,6 +32,9 @@
       "react-app/jest"
     ]
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,md}": "prettier --write"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
