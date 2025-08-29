@@ -1,0 +1,13 @@
+# Ignore node_modules
+node_modules
+
+# Ingore build arquives
+build
+dist
+coverage
+
+# Ignore lock files
+package-lock.json
+
+# Ignore generated cofiguration files
+*.min.js
