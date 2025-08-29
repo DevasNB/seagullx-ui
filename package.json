@@ -21,7 +21,8 @@
     "eject": "react-scripts eject",
     "electron:serve": "concurrently -k \"cross-env BROWSER=none npm run start\" \"npm run electron:start\"",
     "electron:build": "",
-    "electron:start": "wait-on tcp:3000 && electron ."
+    "electron:start": "wait-on tcp:3000 && electron .",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +49,7 @@
     "eslint": "^8.57.1",
     "lint-staged": "^16.1.5",
     "prettier": "^3.6.2",
+    "husky": "^9.1.7",
     "wait-on": "^8.0.4"
   }
 }
