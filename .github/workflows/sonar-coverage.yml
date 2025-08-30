@@ -27,10 +27,11 @@ jobs:
 
       - name: Run SonarQube Scanner
         uses: sonarsource/sonarcloud-github-action@v2
+        env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          args: >
-            -Dsonar.projectKey=minha-app
-            -Dsonar.sources=src
-            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-            -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+            args: >
+                -Dsonar.projectKey=react-frontend
+                -Dsonar.sources=src
+                -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+                -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
