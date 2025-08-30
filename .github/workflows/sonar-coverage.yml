@@ -31,7 +31,9 @@ jobs:
             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
             args: >
-                -Dsonar.projectKey=react-frontend
+                -Dsonar.projectKey=seagullx-ui
                 -Dsonar.sources=src
                 -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
                 -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
+                -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+
