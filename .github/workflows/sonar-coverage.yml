@@ -35,6 +35,6 @@ jobs:
             -Dsonar.projectKey=seagullx-ui
             -Dsonar.sources=src
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-            -Dsonar.branch.name=${{ github.ref_name }}
+            -Dsonar.branch.name=${{ github.head_ref || github.ref_name }}
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
